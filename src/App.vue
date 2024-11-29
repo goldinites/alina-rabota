@@ -57,8 +57,7 @@ const handleRemoveVacancy = (deletingVacancy) => {
 
 const handleCopy = () => {
   if (vacancy.value && candidate.value) {
-    console.log(text.value?.innerText);
-    navigator.clipboard.write(text.value?.innerText ?? '')
+    navigator.clipboard.writeText(text.value?.innerText ?? '')
         .then(() => {
           vacancies.value = vacancies.value.map((vacancyItem) => {
             if (vacancyItem.name === vacancy.value) {

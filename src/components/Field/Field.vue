@@ -85,14 +85,14 @@ if (props.current) {
         </div>
       </template>
       <div class="empty-field" v-else>
-        <p v-if="search">
+        <div v-if="search">
           <p>
             Добавить запись {{ search }}?
           </p>
           <Button @click="handleAdd(search)">
             Добавить
           </Button>
-        </p>
+        </div>
         <div v-else>
           Отсутствуют записи
         </div>
